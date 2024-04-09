@@ -6,11 +6,13 @@ import cropImages from '../services/images'
 
 interface Props{
     game:Game,
+    
 }
 
 export const GameCard = ({game}: Props) => {
+  
   return (
-    <Card borderRadius={10} overflow='hidden'>
+    <Card borderRadius={10} overflow='hidden' width='300px'>
         <Image src={cropImages(game.background_image)}/>
         <CardBody>
             <Heading fontSize='2xl'>
