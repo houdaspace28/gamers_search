@@ -3,6 +3,7 @@ import { useGames } from "../hooks/useGames";
 import { GameCard } from "./GameCard";
 import CardSkeleton from "./CardSkeleton";
 import CardCaontainer from "./CardCaontainer";
+import { Platform } from "../hooks/useGames";
 interface Genre{
     id:number,
     name:string,
@@ -12,12 +13,14 @@ interface Genre{
 
 interface Props{
  selectedGenre: Genre | null;
+ selectedPlatform: Platform | null;
 }
 
 
 
-const GameGrid = ({selectedGenre}:Props) => {
-  const {data,error,loading}=useGames(selectedGenre);
+const GameGrid = ({selectedGenre,selectedPlatform}:Props) => {
+  const {data,error,loading}=useGames(selectedGenre,selectedPlatform);
+
   const skeletons=[1,2,3,4,5,6,7,8];
   if (error) return <Text>{error}</Text>
   return (
