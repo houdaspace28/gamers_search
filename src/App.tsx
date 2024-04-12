@@ -9,6 +9,7 @@ import { PlatformsList } from "./components/PlatformsList"
 import { Platform } from "./hooks/useGames"
 import { SortSelector } from "./components/SortSelector"
 import { HStack } from "@chakra-ui/react"
+import { Title } from "./components/Title"
 
 export interface GameQuery{
   genre: Genre | null;
@@ -41,6 +42,7 @@ function App() {
         </GridItem>
         </Show>
         <GridItem area='main' justifyContent={'space-around'}>
+          <Title gameQuery={gameQuery} />
             <HStack spacing={5} paddingLeft={2}marginBottom={5}>
               <PlatformsList onSelectPlatform={(platform)=>setGameQuery({...gameQuery,platform})} selectedPlatform={gameQuery.platform}/>
               <SortSelector onSelectSortOrder={(sortOrder)=>setGameQuery({...gameQuery,sortOrder})} sortOrder={gameQuery.sortOrder}/>
