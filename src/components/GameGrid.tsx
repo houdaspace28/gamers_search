@@ -3,14 +3,8 @@ import { useGames } from "../hooks/useGames";
 import { GameCard } from "./GameCard";
 import CardSkeleton from "./CardSkeleton";
 import CardCaontainer from "./CardCaontainer";
-import { Platform } from "../hooks/useGames";
 import { GameQuery } from "../App";
-interface Genre{
-    id:number,
-    name:string,
-    image_background:string,
-    
-}
+
 
 interface Props{
  gameQuery: GameQuery;

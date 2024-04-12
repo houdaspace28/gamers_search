@@ -1,5 +1,5 @@
 import { useGenres, Genre } from "../hooks/useGenres"
-import { HStack, Image, List, ListItem , Text, Spinner, Button, Heading} from "@chakra-ui/react"
+import { HStack, Image, List, ListItem ,Spinner, Button, Heading} from "@chakra-ui/react"
 import cropImages from "../services/images"
 
 interface Props{
